@@ -1,7 +1,9 @@
 package ru.embedika.test.embedikatest.models;
 
-import jakarta.persistence.*;
+
 import lombok.Data;
+import javax.persistence.*;
+
 @Entity
 @Table(name = "Car")
 @Data
