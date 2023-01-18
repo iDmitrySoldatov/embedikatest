@@ -23,7 +23,7 @@ public class Car {
     private String colour;
 
     @Column(name = "year")
-    private Integer year;
+    private String year;
 
     @Column(name = "mileage")
     private Integer mileage;

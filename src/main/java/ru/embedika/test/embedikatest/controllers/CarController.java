@@ -4,9 +4,11 @@ import io.swagger.models.auth.In;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.embedika.test.embedikatest.dto.CarDTO;
+import ru.embedika.test.embedikatest.exception.CarExistException;
 import ru.embedika.test.embedikatest.exception.ResourceNotFoundException;
 import ru.embedika.test.embedikatest.services.CarService;
 
+import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -31,7 +33,7 @@ public class CarController {
         }
     }
     @PostMapping("/car")
-    public CarDTO createCar(@RequestBody CarDTO carDTO) {
+    public CarDTO createCar(@RequestBody @Valid CarDTO carDTO) {
         return service.save(carDTO);
     }
     @PutMapping("/car/{id}")
