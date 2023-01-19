@@ -13,11 +13,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class EmbedikatestApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(EmbedikatestApplication.class, args);
-	}
-	@Bean
-	public ModelMapper modelMapper() {
-		return new ModelMapper();
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(EmbedikatestApplication.class, args);
+    }
+
+    @Bean
+    public ModelMapper modelMapper() {
+        return new ModelMapper();
+    }
 }

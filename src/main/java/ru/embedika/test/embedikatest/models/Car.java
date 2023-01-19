@@ -2,6 +2,7 @@ package ru.embedika.test.embedikatest.models;
 
 
 import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity

@@ -3,6 +3,7 @@ package ru.embedika.test.embedikatest.controllers;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.embedika.test.embedikatest.dto.CarDTO;
+import ru.embedika.test.embedikatest.exception.CarExistException;
 import ru.embedika.test.embedikatest.exception.ResourceNotFoundException;
 import ru.embedika.test.embedikatest.services.CarService;
 
@@ -36,7 +37,12 @@ public class CarController {
 
     @PostMapping("/car")
     public CarDTO createCar(@RequestBody @Valid CarDTO carDTO) {
-        return service.save(carDTO);
+        CarDTO car = service.findByNumber(carDTO.getNumber());
+        if (car != null) {
+            throw new CarExistException("A car with this number already exists");
+        } else {
+            return service.save(carDTO);
+        }
     }
 
     @PutMapping("/car/{id}")

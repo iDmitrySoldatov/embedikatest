@@ -128,4 +128,15 @@ public class CarServiceImpl implements CarService {
         }
         return carDTOList;
     }
+
+    @Override
+    public CarDTO findByNumber(String number) {
+        Car car = repository.findByNumber(number);
+        if (car != null) {
+            CarDTO carDTO = convertDTO.convertToCarDTO(car);
+            return carDTO;
+        } else {
+            return null;
+        }
+    }
 }
