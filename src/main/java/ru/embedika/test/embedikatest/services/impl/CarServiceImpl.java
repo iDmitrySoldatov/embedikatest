@@ -19,26 +19,29 @@ public class CarServiceImpl implements CarService {
 
     private CarRepository repository;
     private ConvertDTO convertDTO;
+
     @Autowired
     public CarServiceImpl(CarRepository repository, ConvertDTO convertDTO) {
         this.repository = repository;
         this.convertDTO = convertDTO;
     }
+
     @Override
     public List<CarDTO> findAll() {
         List<Car> carList = repository.findAll();
         List<CarDTO> carDTOList = new ArrayList<>(carList.size());
-        for(Car car : carList) {
+        for (Car car : carList) {
             CarDTO carDTO = convertDTO.convertToCarDTO(car);
             carDTOList.add(carDTO);
         }
         return carDTOList;
     }
 
+
     @Override
     public CarDTO findById(Integer id) {
         Optional<Car> optionalCar = repository.findById(id);
-        if(!optionalCar.isEmpty()) {
+        if (!optionalCar.isEmpty()) {
             Car car = optionalCar.get();
             CarDTO carDTO = convertDTO.convertToCarDTO(car);
             return carDTO;
@@ -58,5 +61,71 @@ public class CarServiceImpl implements CarService {
     @Transactional
     public void deleteById(Integer id) {
         repository.deleteById(id);
+    }
+
+    @Override
+    public List<CarDTO> findAllByOrderByPriceDesc() {
+        List<Car> carList = repository.findAllByOrderByPriceDesc();
+        List<CarDTO> carDTOList = new ArrayList<>(carList.size());
+        for (Car car : carList) {
+            CarDTO carDTO = convertDTO.convertToCarDTO(car);
+            carDTOList.add(carDTO);
+        }
+        return carDTOList;
+    }
+
+    @Override
+    public List<CarDTO> findAllByOrderByPriceAsc() {
+        List<Car> carList = repository.findAllByOrderByPriceAsc();
+        List<CarDTO> carDTOList = new ArrayList<>(carList.size());
+        for (Car car : carList) {
+            CarDTO carDTO = convertDTO.convertToCarDTO(car);
+            carDTOList.add(carDTO);
+        }
+        return carDTOList;
+    }
+
+    @Override
+    public List<CarDTO> findAllByOrderByMileageDesc() {
+        List<Car> carList = repository.findAllByOrderByMileageDesc();
+        List<CarDTO> carDTOList = new ArrayList<>(carList.size());
+        for (Car car : carList) {
+            CarDTO carDTO = convertDTO.convertToCarDTO(car);
+            carDTOList.add(carDTO);
+        }
+        return carDTOList;
+    }
+
+    @Override
+    public List<CarDTO> findAllByOrderByMileageAsc() {
+        List<Car> carList = repository.findAllByOrderByMileageAsc();
+        List<CarDTO> carDTOList = new ArrayList<>(carList.size());
+        for (Car car : carList) {
+            CarDTO carDTO = convertDTO.convertToCarDTO(car);
+            carDTOList.add(carDTO);
+        }
+        return carDTOList;
+    }
+
+    @Override
+    public List<CarDTO> findAllByOrderByYearDesc() {
+        List<Car> carList = repository.findAllByOrderByYearDesc();
+        List<CarDTO> carDTOList = new ArrayList<>(carList.size());
+        for (Car car : carList) {
+            CarDTO carDTO = convertDTO.convertToCarDTO(car);
+            carDTOList.add(carDTO);
+        }
+        return carDTOList;
+    }
+
+    @Override
+    public List<CarDTO> findAllByOrderByYearAsc() {
+        List<Car> carList = repository.findAllByOrderByYearAsc();
+        List<CarDTO> carDTOList = new ArrayList<>(carList.size());
+        for (Car car : carList) {
+            CarDTO carDTO = convertDTO.convertToCarDTO(car);
+            carDTOList.add(carDTO);
+        }
+        return carDTOList;
     }
 }

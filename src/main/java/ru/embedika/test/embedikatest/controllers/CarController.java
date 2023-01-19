@@ -1,10 +1,8 @@
 package ru.embedika.test.embedikatest.controllers;
 
-import io.swagger.models.auth.In;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.embedika.test.embedikatest.dto.CarDTO;
-import ru.embedika.test.embedikatest.exception.CarExistException;
 import ru.embedika.test.embedikatest.exception.ResourceNotFoundException;
 import ru.embedika.test.embedikatest.services.CarService;
 
@@ -16,26 +14,31 @@ import java.util.Map;
 @RestController
 public class CarController {
     private CarService service;
+
     public CarController(CarService service) {
         this.service = service;
     }
+
     @GetMapping("/car")
     public List<CarDTO> getAll() {
         return service.findAll();
     }
+
     @GetMapping("/car/{id}")
     public ResponseEntity<CarDTO> getCar(@PathVariable Integer id) {
         CarDTO carDTO = service.findById(id);
-        if(carDTO == null) {
+        if (carDTO == null) {
             throw new ResourceNotFoundException("Car not exist with id : " + id);
         } else {
             return ResponseEntity.ok(carDTO);
         }
     }
+
     @PostMapping("/car")
     public CarDTO createCar(@RequestBody @Valid CarDTO carDTO) {
         return service.save(carDTO);
     }
+
     @PutMapping("/car/{id}")
     public ResponseEntity<CarDTO> updateCar(@PathVariable Integer id, @RequestBody CarDTO carDTO) {
         CarDTO car = service.findById(id);
@@ -52,10 +55,11 @@ public class CarController {
             return ResponseEntity.ok(updateCar);
         }
     }
+
     @DeleteMapping("/car/{id}")
     public ResponseEntity<Map<String, Boolean>> deleteCar(@PathVariable Integer id) {
         CarDTO car = service.findById(id);
-        if(car == null) {
+        if (car == null) {
             throw new ResourceNotFoundException("Car not exist with id : " + id);
         } else {
             service.deleteById(id);
@@ -63,5 +67,35 @@ public class CarController {
             response.put("delete", Boolean.TRUE);
             return ResponseEntity.ok(response);
         }
+    }
+
+    @GetMapping("/carByOrderByPriceDesc")
+    public List<CarDTO> getAllByOrderByPriceDesc() {
+        return service.findAllByOrderByPriceDesc();
+    }
+
+    @GetMapping("/carByOrderByPriceAsc")
+    public List<CarDTO> getAllByOrderByPriceAsc() {
+        return service.findAllByOrderByPriceAsc();
+    }
+
+    @GetMapping("/carByOrderByMileageDesc")
+    public List<CarDTO> getAllByOrderByMileageDesc() {
+        return service.findAllByOrderByMileageDesc();
+    }
+
+    @GetMapping("/carByOrderByMileageAsc")
+    public List<CarDTO> getAllByOrderByMileageAsc() {
+        return service.findAllByOrderByMileageAsc();
+    }
+
+    @GetMapping("/carByOrderByYearDesc")
+    public List<CarDTO> getAllByOrderByYearDesc() {
+        return service.findAllByOrderByYearDesc();
+    }
+
+    @GetMapping("/carByOrderByYearAsc")
+    public List<CarDTO> getAllByOrderByYearAsc() {
+        return service.findAllByOrderByYearAsc();
     }
 }
