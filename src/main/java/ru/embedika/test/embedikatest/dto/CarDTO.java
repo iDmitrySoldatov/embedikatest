@@ -3,10 +3,7 @@ package ru.embedika.test.embedikatest.dto;
 
 import lombok.Data;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Positive;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 @Data
 public class CarDTO {
@@ -19,7 +16,7 @@ public class CarDTO {
     private String colour;
     @Pattern(regexp = "((19|20)\\d\\d)", message = "Введите год в верном формате")
     private String year;
-    @Positive(message = "Введите положительное число")
+    @PositiveOrZero(message = "Введите положительное число")
     private Integer mileage;
     @Positive(message = "Введите положительное число")
     private Long price;
