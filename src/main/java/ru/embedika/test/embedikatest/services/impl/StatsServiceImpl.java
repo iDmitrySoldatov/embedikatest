@@ -1,5 +1,6 @@
 package ru.embedika.test.embedikatest.services.impl;
 
+import io.micrometer.core.annotation.Timed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,6 +28,7 @@ public class StatsServiceImpl implements StatsService {
     }
 
     @Override
+    @Timed("timeFindAllStats")
     public List<StatsDTO> findAll() {
         List<Stats> statsList = repository.findAll();
         List<StatsDTO> statsDTOList = new ArrayList<>();
@@ -39,12 +41,14 @@ public class StatsServiceImpl implements StatsService {
 
     @Override
     @Transactional
+    @Timed("timeSaveStats")
     public StatsDTO save(StatsDTO statsDTO) {
         Stats stats = repository.save(convertDTO.convertToStats(statsDTO));
         return convertDTO.convertToStatsDTO(stats);
     }
 
     @Override
+    @Timed("timeFindByIdStats")
     public StatsDTO findById(Integer id) {
         Optional<Stats> optionalStats = repository.findById(id);
         if (!optionalStats.isEmpty()) {

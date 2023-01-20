@@ -1,0 +1,98 @@
+2023-01-20 11:12:20.070  INFO 143808 --- [restartedMain] r.e.t.e.EmbedikatestApplication          : Starting EmbedikatestApplication using Java 17.0.5 on dmitry-NBLK-WAX9X with PID 143808 (/home/dmitry/Documents/Java/project/embedikatest/target/classes started by dmitry in /home/dmitry/Documents/Java/project/embedikatest)
+2023-01-20 11:12:20.072  INFO 143808 --- [restartedMain] r.e.t.e.EmbedikatestApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-01-20 11:12:20.160  INFO 143808 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-20 11:12:20.945  INFO 143808 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-20 11:12:20.987  INFO 143808 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 2 JPA repository interfaces.
+2023-01-20 11:12:21.549  INFO 143808 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-20 11:12:21.558  INFO 143808 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-20 11:12:21.558  INFO 143808 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-20 11:12:21.607  INFO 143808 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-20 11:12:21.608  INFO 143808 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1447 ms
+2023-01-20 11:12:21.611 TRACE 143808 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]
+2023-01-20 11:12:21.630 TRACE 143808 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/HttpEncodingAutoConfiguration.class]
+2023-01-20 11:12:21.630 TRACE 143808 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'logFilter'; order=2147483647, resource=class path resource [ru/embedika/test/embedikatest/config/WebMvcConfiguraitor.class]
+2023-01-20 11:12:21.635 DEBUG 143808 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, logFilter urls=[/*] order=2147483647
+2023-01-20 11:12:21.635 DEBUG 143808 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2023-01-20 11:12:21.656 DEBUG 143808 --- [restartedMain] o.s.w.f.CommonsRequestLoggingFilter      : Filter 'logFilter' configured for use
+2023-01-20 11:12:21.751  INFO 143808 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2023-01-20 11:12:21.751  INFO 143808 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-01-20 11:12:21.752  INFO 143808 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : 
+2023-01-20 11:12:21.757  INFO 143808 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-20 11:12:22.046  INFO 143808 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-20 11:12:22.061  INFO 143808 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost/embedika (PostgreSQL 14.6)
+2023-01-20 11:12:22.088  INFO 143808 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.010s)
+2023-01-20 11:12:22.088  WARN 143808 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-01-20 11:12:22.097  INFO 143808 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2023-01-20 11:12:22.098  INFO 143808 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-01-20 11:12:22.171  INFO 143808 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-20 11:12:22.218  INFO 143808 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-01-20 11:12:22.397  INFO 143808 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-20 11:12:22.488  INFO 143808 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2023-01-20 11:12:22.943  INFO 143808 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-20 11:12:22.949  INFO 143808 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 11:12:23.483  WARN 143808 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-20 11:12:23.537 TRACE 143808 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	r.e.t.e.c.CarController:
+	{GET [/car]}: getAllCar()
+	{GET [/car/{id}]}: getCar(Integer)
+	{POST [/car]}: createCar(CarDTO)
+	{PUT [/car/{id}]}: updateCar(Integer,CarDTO)
+	{DELETE [/car/{id}]}: deleteCar(Integer)
+	{GET [/carByOrderByPriceDesc]}: getAllByOrderByPriceDesc()
+	{GET [/carByOrderByPriceAsc]}: getAllByOrderByPriceAsc()
+	{GET [/carByOrderByMileageDesc]}: getAllByOrderByMileageDesc()
+	{GET [/carByOrderByMileageAsc]}: getAllByOrderByMileageAsc()
+	{GET [/carByOrderByYearDesc]}: getAllByOrderByYearDesc()
+	{GET [/carByOrderByYearAsc]}: getAllByOrderByYearAsc()
+2023-01-20 11:12:23.541 TRACE 143808 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	r.e.t.e.c.StatsController:
+	{GET [/stats]}: getAllStats()
+2023-01-20 11:12:23.542 TRACE 143808 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-01-20 11:12:23.544 TRACE 143808 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+2023-01-20 11:12:23.546 TRACE 143808 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-01-20 11:12:23.550 TRACE 143808 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-01-20 11:12:23.552 DEBUG 143808 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2023-01-20 11:12:23.597 TRACE 143808 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui/] onto ParameterizableViewController [view="forward:/swagger-ui/index.html"]
+2023-01-20 11:12:23.597 DEBUG 143808 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/] in 'viewControllerHandlerMapping'
+2023-01-20 11:12:23.602 DEBUG 143808 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2023-01-20 11:12:23.610 TRACE 143808 --- [restartedMain] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2023-01-20 11:12:23.618 TRACE 143808 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/springfox-swagger-ui/]]
+2023-01-20 11:12:23.619 DEBUG 143808 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**] in 'resourceHandlerMapping'
+2023-01-20 11:12:23.677  INFO 143808 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-20 11:12:23.682 DEBUG 143808 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-01-20 11:12:23.714 DEBUG 143808 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-01-20 11:12:23.926  INFO 143808 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-20 11:12:24.203  INFO 143808 --- [restartedMain] r.e.t.e.EmbedikatestApplication          : Started EmbedikatestApplication in 4.576 seconds (JVM running for 5.368)
+2023-01-20 11:12:29.370  INFO 143808 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-20 11:12:29.370  INFO 143808 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-20 11:12:29.371 TRACE 143808 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.multipart.support.StandardServletMultipartResolver@4b620d73
+2023-01-20 11:12:29.371 TRACE 143808 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@4f60e467
+2023-01-20 11:12:29.371 TRACE 143808 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.theme.FixedThemeResolver@1d3c998e
+2023-01-20 11:12:29.372 TRACE 143808 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected DefaultRequestToViewNameTranslator
+2023-01-20 11:12:29.372 TRACE 143808 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected SessionFlashMapManager
+2023-01-20 11:12:29.372 DEBUG 143808 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-01-20 11:12:29.373  INFO 143808 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-01-20 11:12:29.379 DEBUG 143808 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /car/3]
+2023-01-20 11:12:29.386 TRACE 143808 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/car/3", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-20 11:12:29.390 TRACE 143808 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ru.embedika.test.embedikatest.controllers.CarController#getCar(Integer)
+2023-01-20 11:12:29.405 TRACE 143808 --- [http-nio-8080-exec-1] o.s.web.method.HandlerMethod             : Arguments: [3]
+2023-01-20 11:12:29.482 DEBUG 143808 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-20 11:12:29.488 TRACE 143808 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [CarDTO(id=3, number=АА444А54, brand=bmw, colour=black, year=1998, mileage=0, price=120)]
+2023-01-20 11:12:29.502 TRACE 143808 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-20 11:12:29.502 TRACE 143808 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-20 11:12:29.503 DEBUG 143808 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-20 11:12:29.504 DEBUG 143808 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /car/3]
+2023-01-20 11:13:09.242  INFO 143808 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 11:13:09.250  INFO 143808 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-20 11:13:09.261  INFO 143808 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

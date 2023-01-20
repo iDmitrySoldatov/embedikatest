@@ -1,5 +1,6 @@
 package ru.embedika.test.embedikatest.services.impl;
 
+import io.micrometer.core.annotation.Timed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,6 +33,7 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
+    @Timed("timeFindAllCar")
     public List<CarDTO> findAll() {
         List<Car> carList = repository.findAll();
         List<CarDTO> carDTOList = new ArrayList<>(carList.size());
@@ -44,6 +46,7 @@ public class CarServiceImpl implements CarService {
 
 
     @Override
+    @Timed("timeFindCarByID")
     public CarDTO findById(Integer id) {
         Optional<Car> optionalCar = repository.findById(id);
         if (!optionalCar.isEmpty()) {
@@ -57,6 +60,7 @@ public class CarServiceImpl implements CarService {
 
     @Override
     @Transactional
+    @Timed("timeSaveCar")
     public CarDTO save(CarDTO carDTO) {
         Car car = repository.save(convertDTO.convertToCar(carDTO));
         StatsDTO statsDTO = statsService.findById(1);
@@ -78,6 +82,7 @@ public class CarServiceImpl implements CarService {
 
     @Override
     @Transactional
+    @Timed("timeDeleteCar")
     public void deleteById(Integer id) {
         Optional<Car> optionalCar = repository.findById(id);
         if (!optionalCar.isEmpty()) {
@@ -93,6 +98,7 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
+    @Timed("timeFindAllCarByOrderByPriceDesc")
     public List<CarDTO> findAllByOrderByPriceDesc() {
         List<Car> carList = repository.findAllByOrderByPriceDesc();
         List<CarDTO> carDTOList = new ArrayList<>(carList.size());
@@ -104,6 +110,7 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
+    @Timed("timeFindAllCarByOrderByPriceAsc")
     public List<CarDTO> findAllByOrderByPriceAsc() {
         List<Car> carList = repository.findAllByOrderByPriceAsc();
         List<CarDTO> carDTOList = new ArrayList<>(carList.size());
@@ -115,6 +122,7 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
+    @Timed("timeFindAllCarByOrderByMileageDesc")
     public List<CarDTO> findAllByOrderByMileageDesc() {
         List<Car> carList = repository.findAllByOrderByMileageDesc();
         List<CarDTO> carDTOList = new ArrayList<>(carList.size());
@@ -126,6 +134,7 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
+    @Timed("timeFindAllCarByOrderByMileageAsc")
     public List<CarDTO> findAllByOrderByMileageAsc() {
         List<Car> carList = repository.findAllByOrderByMileageAsc();
         List<CarDTO> carDTOList = new ArrayList<>(carList.size());
@@ -137,6 +146,7 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
+    @Timed("timeFindAllCarByOrderByYearDesc")
     public List<CarDTO> findAllByOrderByYearDesc() {
         List<Car> carList = repository.findAllByOrderByYearDesc();
         List<CarDTO> carDTOList = new ArrayList<>(carList.size());
@@ -148,6 +158,7 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
+    @Timed("timeFindAllCarByOrderByYearAsc")
     public List<CarDTO> findAllByOrderByYearAsc() {
         List<Car> carList = repository.findAllByOrderByYearAsc();
         List<CarDTO> carDTOList = new ArrayList<>(carList.size());
@@ -159,6 +170,7 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
+    @Timed("timeFindCarByNumber")
     public CarDTO findByNumber(String number) {
         Car car = repository.findByNumber(number);
         if (car != null) {
