@@ -2,6 +2,7 @@ package ru.embedika.test.embedikatest.services.impl;
 
 import io.micrometer.core.annotation.Timed;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.embedika.test.embedikatest.dto.CarDTO;
@@ -11,6 +12,7 @@ import ru.embedika.test.embedikatest.models.Car;
 import ru.embedika.test.embedikatest.repositories.CarRepository;
 import ru.embedika.test.embedikatest.services.CarService;
 import ru.embedika.test.embedikatest.services.StatsService;
+import springfox.documentation.annotations.Cacheable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +49,7 @@ public class CarServiceImpl implements CarService {
 
     @Override
     @Timed("timeFindCarByID")
+    @Cacheable(value = "findByID")
     public CarDTO findById(Integer id) {
         Optional<Car> optionalCar = repository.findById(id);
         if (!optionalCar.isEmpty()) {
@@ -61,6 +64,7 @@ public class CarServiceImpl implements CarService {
     @Override
     @Transactional
     @Timed("timeSaveCar")
+    @CachePut(value = "save")
     public CarDTO save(CarDTO carDTO) {
         Car car = repository.save(convertDTO.convertToCar(carDTO));
         StatsDTO statsDTO = statsService.findById(1);
@@ -171,6 +175,7 @@ public class CarServiceImpl implements CarService {
 
     @Override
     @Timed("timeFindCarByNumber")
+    @Cacheable(value = "findByNumberName")
     public CarDTO findByNumber(String number) {
         Car car = repository.findByNumber(number);
         if (car != null) {

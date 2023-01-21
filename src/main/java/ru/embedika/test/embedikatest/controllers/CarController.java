@@ -7,7 +7,6 @@ import ru.embedika.test.embedikatest.dto.CarDTO;
 import ru.embedika.test.embedikatest.exception.CarExistException;
 import ru.embedika.test.embedikatest.exception.ResourceNotFoundException;
 import ru.embedika.test.embedikatest.services.CarService;
-
 import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
@@ -48,7 +47,7 @@ public class CarController {
     }
 
     @PutMapping("/car/{id}")
-    public ResponseEntity<CarDTO> updateCar(@PathVariable Integer id, @RequestBody CarDTO carDTO) {
+    public ResponseEntity<CarDTO> updateCar(@PathVariable Integer id, @RequestBody @Valid CarDTO carDTO) {
         CarDTO car = service.findById(id);
         if (car == null) {
             throw new ResourceNotFoundException("Car not exist with id : " + id);
