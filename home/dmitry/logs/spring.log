@@ -1,0 +1,674 @@
+2023-01-23 00:06:48.523  INFO 27755 --- [restartedMain] r.e.t.e.EmbedikatestApplication          : Starting EmbedikatestApplication using Java 17.0.5 on dmitry-NBLK-WAX9X with PID 27755 (/home/dmitry/Documents/Java/project/embedikatest/target/classes started by dmitry in /home/dmitry/Documents/Java/project/embedikatest)
+2023-01-23 00:06:48.530  INFO 27755 --- [restartedMain] r.e.t.e.EmbedikatestApplication          : No active profile set, falling back to default profiles: default
+2023-01-23 00:06:48.631  INFO 27755 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-23 00:06:50.022  INFO 27755 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:06:50.080  INFO 27755 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 2 JPA repository interfaces.
+2023-01-23 00:06:51.013  INFO 27755 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-23 00:06:51.023  INFO 27755 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-23 00:06:51.024  INFO 27755 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2023-01-23 00:06:51.097  INFO 27755 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-23 00:06:51.097  INFO 27755 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2465 ms
+2023-01-23 00:06:51.318 TRACE 27755 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Added existing Filter initializer bean 'webMvcMetricsFilter'; order=-2147483647, resource=class path resource [org/springframework/boot/actuate/autoconfigure/metrics/web/servlet/WebMvcMetricsAutoConfiguration.class]
+2023-01-23 00:06:51.318 TRACE 27755 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]
+2023-01-23 00:06:51.319 TRACE 27755 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Added existing ServletContextInitializer initializer bean 'servletEndpointRegistrar'; order=2147483647, resource=class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration.class]
+2023-01-23 00:06:51.349 TRACE 27755 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/HttpEncodingAutoConfiguration.class]
+2023-01-23 00:06:51.350 TRACE 27755 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'logFilter'; order=2147483647, resource=class path resource [ru/embedika/test/embedikatest/configuration/WebMvcConfiguraitor.class]
+2023-01-23 00:06:51.355 DEBUG 27755 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: filterRegistrationBean urls=[/*] order=-2147483647, characterEncodingFilter urls=[/*] order=-2147483648, logFilter urls=[/*] order=2147483647
+2023-01-23 00:06:51.355 DEBUG 27755 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2023-01-23 00:06:51.380 DEBUG 27755 --- [restartedMain] o.s.w.f.CommonsRequestLoggingFilter      : Filter 'logFilter' configured for use
+2023-01-23 00:06:51.543  INFO 27755 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:06:51.629  INFO 27755 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2023-01-23 00:06:51.780  INFO 27755 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-23 00:06:51.883  INFO 27755 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-23 00:06:52.242  INFO 27755 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-23 00:06:52.261  INFO 27755 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2023-01-23 00:06:53.000  INFO 27755 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:06:53.009  INFO 27755 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:06:53.065  INFO 27755 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-23 00:06:53.942  WARN 27755 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:06:54.037 TRACE 27755 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	r.e.t.e.c.CarController:
+	{GET [/car]}: getAllCar()
+	{GET [/car/{id}]}: getCar(Integer)
+	{POST [/car]}: createCar(CarDTO)
+	{PUT [/car/{id}]}: upgradeCar(Integer,CarDTO)
+	{DELETE [/car/{id}]}: deleteCar(Integer)
+	{GET [/carByOrderByPriceDesc]}: getAllByOrderByPriceDesc()
+	{GET [/carByOrderByPriceAsc]}: getAllByOrderByPriceAsc()
+	{GET [/carByOrderByMileageDesc]}: getAllByOrderByMileageDesc()
+	{GET [/carByOrderByMileageAsc]}: getAllByOrderByMileageAsc()
+	{GET [/carByOrderByYearDesc]}: getAllByOrderByYearDesc()
+	{GET [/carByOrderByYearAsc]}: getAllByOrderByYearAsc()
+2023-01-23 00:06:54.041 TRACE 27755 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	r.e.t.e.c.StatsController:
+	{GET [/stats]}: getAllStats()
+2023-01-23 00:06:54.043 TRACE 27755 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-01-23 00:06:54.046 TRACE 27755 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+2023-01-23 00:06:54.048 TRACE 27755 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-01-23 00:06:54.053 TRACE 27755 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-01-23 00:06:54.057 DEBUG 27755 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2023-01-23 00:06:54.272  INFO 27755 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-01-23 00:06:54.277 TRACE 27755 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Register "{GET [/actuator/health], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}" to java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2023-01-23 00:06:54.278 TRACE 27755 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Register "{GET [/actuator/health/**], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}" to java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2023-01-23 00:06:54.279 TRACE 27755 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Register "{GET [/actuator/info], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}" to java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2023-01-23 00:06:54.281 TRACE 27755 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Register "{GET [/actuator/prometheus], produces [text/plain;version=0.0.4;charset=utf-8]}" to java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2023-01-23 00:06:54.282 TRACE 27755 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Register "{GET [/actuator], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}" to public java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping$WebMvcLinksHandler.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-01-23 00:06:54.377 TRACE 27755 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui/] onto ParameterizableViewController [view="forward:/swagger-ui/index.html"]
+2023-01-23 00:06:54.377 DEBUG 27755 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/] in 'viewControllerHandlerMapping'
+2023-01-23 00:06:54.385 DEBUG 27755 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2023-01-23 00:06:54.410 TRACE 27755 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui/**] onto ResourceHttpRequestHandler [class path resource [META-INF/resources/webjars/springfox-swagger-ui/]]
+2023-01-23 00:06:54.411 DEBUG 27755 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**] in 'resourceHandlerMapping'
+2023-01-23 00:06:54.457 DEBUG 27755 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-01-23 00:06:54.508 DEBUG 27755 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-01-23 00:06:54.953  INFO 27755 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-23 00:06:55.360  INFO 27755 --- [restartedMain] r.e.t.e.EmbedikatestApplication          : Started EmbedikatestApplication in 7.355 seconds (JVM running for 8.224)
+2023-01-23 00:07:00.875  INFO 27755 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:07:00.881  INFO 27755 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-23 00:07:00.898  INFO 27755 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-23 00:07:24.845  INFO 27943 --- [restartedMain] r.e.t.e.EmbedikatestApplication          : Starting EmbedikatestApplication using Java 17.0.5 on dmitry-NBLK-WAX9X with PID 27943 (/home/dmitry/Documents/Java/project/embedikatest/target/classes started by dmitry in /home/dmitry/Documents/Java/project/embedikatest)
+2023-01-23 00:07:24.849  INFO 27943 --- [restartedMain] r.e.t.e.EmbedikatestApplication          : No active profile set, falling back to default profiles: default
+2023-01-23 00:07:24.941  INFO 27943 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-23 00:07:26.294  INFO 27943 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:07:26.351  INFO 27943 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 2 JPA repository interfaces.
+2023-01-23 00:07:27.231  INFO 27943 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-23 00:07:27.241  INFO 27943 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-23 00:07:27.242  INFO 27943 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2023-01-23 00:07:27.316  INFO 27943 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-23 00:07:27.317  INFO 27943 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2375 ms
+2023-01-23 00:07:27.526 TRACE 27943 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Added existing Filter initializer bean 'webMvcMetricsFilter'; order=-2147483647, resource=class path resource [org/springframework/boot/actuate/autoconfigure/metrics/web/servlet/WebMvcMetricsAutoConfiguration.class]
+2023-01-23 00:07:27.526 TRACE 27943 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]
+2023-01-23 00:07:27.527 TRACE 27943 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Added existing ServletContextInitializer initializer bean 'servletEndpointRegistrar'; order=2147483647, resource=class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration.class]
+2023-01-23 00:07:27.557 TRACE 27943 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/HttpEncodingAutoConfiguration.class]
+2023-01-23 00:07:27.558 TRACE 27943 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'logFilter'; order=2147483647, resource=class path resource [ru/embedika/test/embedikatest/configuration/WebMvcConfiguraitor.class]
+2023-01-23 00:07:27.563 DEBUG 27943 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: filterRegistrationBean urls=[/*] order=-2147483647, characterEncodingFilter urls=[/*] order=-2147483648, logFilter urls=[/*] order=2147483647
+2023-01-23 00:07:27.564 DEBUG 27943 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2023-01-23 00:07:27.588 DEBUG 27943 --- [restartedMain] o.s.w.f.CommonsRequestLoggingFilter      : Filter 'logFilter' configured for use
+2023-01-23 00:07:27.759  INFO 27943 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:07:27.825  INFO 27943 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2023-01-23 00:07:27.943  INFO 27943 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-23 00:07:28.048  INFO 27943 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-23 00:07:28.375  INFO 27943 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-23 00:07:28.396  INFO 27943 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2023-01-23 00:07:29.117  INFO 27943 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:07:29.126  INFO 27943 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:07:29.185  INFO 27943 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-23 00:07:30.061  WARN 27943 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:07:30.167 TRACE 27943 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	r.e.t.e.c.CarController:
+	{GET [/car]}: getAllCar()
+	{GET [/car/{id}]}: getCar(Integer)
+	{POST [/car]}: createCar(CarDTO)
+	{PUT [/car/{id}]}: upgradeCar(Integer,CarDTO)
+	{DELETE [/car/{id}]}: deleteCar(Integer)
+	{GET [/carByOrderByPriceDesc]}: getAllByOrderByPriceDesc()
+	{GET [/carByOrderByPriceAsc]}: getAllByOrderByPriceAsc()
+	{GET [/carByOrderByMileageDesc]}: getAllByOrderByMileageDesc()
+	{GET [/carByOrderByMileageAsc]}: getAllByOrderByMileageAsc()
+	{GET [/carByOrderByYearDesc]}: getAllByOrderByYearDesc()
+	{GET [/carByOrderByYearAsc]}: getAllByOrderByYearAsc()
+2023-01-23 00:07:30.171 TRACE 27943 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	r.e.t.e.c.StatsController:
+	{GET [/stats]}: getAllStats()
+2023-01-23 00:07:30.173 TRACE 27943 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-01-23 00:07:30.176 TRACE 27943 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+2023-01-23 00:07:30.178 TRACE 27943 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-01-23 00:07:30.183 TRACE 27943 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-01-23 00:07:30.188 DEBUG 27943 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2023-01-23 00:07:30.404  INFO 27943 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-01-23 00:07:30.409 TRACE 27943 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Register "{GET [/actuator/health/**], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}" to java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2023-01-23 00:07:30.410 TRACE 27943 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Register "{GET [/actuator/health], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}" to java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2023-01-23 00:07:30.411 TRACE 27943 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Register "{GET [/actuator/info], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}" to java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2023-01-23 00:07:30.413 TRACE 27943 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Register "{GET [/actuator/prometheus], produces [text/plain;version=0.0.4;charset=utf-8]}" to java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2023-01-23 00:07:30.414 TRACE 27943 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Register "{GET [/actuator], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}" to public java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping$WebMvcLinksHandler.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-01-23 00:07:30.518 TRACE 27943 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui/] onto ParameterizableViewController [view="forward:/swagger-ui/index.html"]
+2023-01-23 00:07:30.518 DEBUG 27943 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/] in 'viewControllerHandlerMapping'
+2023-01-23 00:07:30.527 DEBUG 27943 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2023-01-23 00:07:30.554 TRACE 27943 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui/**] onto ResourceHttpRequestHandler [class path resource [META-INF/resources/webjars/springfox-swagger-ui/]]
+2023-01-23 00:07:30.554 DEBUG 27943 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**] in 'resourceHandlerMapping'
+2023-01-23 00:07:30.607 DEBUG 27943 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-01-23 00:07:30.664 DEBUG 27943 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-01-23 00:07:31.100  INFO 27943 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-23 00:07:31.481  INFO 27943 --- [restartedMain] r.e.t.e.EmbedikatestApplication          : Started EmbedikatestApplication in 7.163 seconds (JVM running for 8.397)
+2023-01-23 00:07:54.526  INFO 27943 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:07:54.527  INFO 27943 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-23 00:07:54.527 TRACE 27943 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.multipart.support.StandardServletMultipartResolver@6243c30a
+2023-01-23 00:07:54.527 TRACE 27943 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@436856c5
+2023-01-23 00:07:54.527 TRACE 27943 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.theme.FixedThemeResolver@2849e1d6
+2023-01-23 00:07:54.529 TRACE 27943 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected DefaultRequestToViewNameTranslator
+2023-01-23 00:07:54.530 TRACE 27943 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected SessionFlashMapManager
+2023-01-23 00:07:54.530 DEBUG 27943 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-01-23 00:07:54.530  INFO 27943 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-01-23 00:07:54.540 DEBUG 27943 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config]
+2023-01-23 00:07:54.548 TRACE 27943 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config", parameters={masked}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:07:54.557 TRACE 27943 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to HandlerExecutionChain with [ResourceHttpRequestHandler [class path resource [META-INF/resources/webjars/springfox-swagger-ui/]]] and 5 interceptors
+2023-01-23 00:07:54.564 TRACE 27943 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not modified
+2023-01-23 00:07:54.564 TRACE 27943 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:07:54.564 DEBUG 27943 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED, headers={masked}
+2023-01-23 00:07:54.565 DEBUG 27943 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config]
+2023-01-23 00:07:54.813 DEBUG 27943 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /swagger-resources/configuration/ui]
+2023-01-23 00:07:54.814 TRACE 27943 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/swagger-resources/configuration/ui", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:07:54.816 TRACE 27943 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to springfox.documentation.swagger.web.ApiResourceController#uiConfiguration()
+2023-01-23 00:07:54.832 TRACE 27943 --- [http-nio-8080-exec-2] o.s.web.method.HandlerMethod             : Arguments: []
+2023-01-23 00:07:54.845 DEBUG 27943 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json]
+2023-01-23 00:07:54.887 TRACE 27943 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [springfox.documentation.swagger.web.UiConfiguration@79e9148e]
+2023-01-23 00:07:54.905 TRACE 27943 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:07:54.906 TRACE 27943 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:07:54.906 DEBUG 27943 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:07:54.907 DEBUG 27943 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /swagger-resources/configuration/ui]
+2023-01-23 00:07:54.913 DEBUG 27943 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /swagger-resources/configuration/security]
+2023-01-23 00:07:54.914 TRACE 27943 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/swagger-resources/configuration/security", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:07:54.915 TRACE 27943 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to springfox.documentation.swagger.web.ApiResourceController#securityConfiguration()
+2023-01-23 00:07:54.915 TRACE 27943 --- [http-nio-8080-exec-3] o.s.web.method.HandlerMethod             : Arguments: []
+2023-01-23 00:07:54.916 DEBUG 27943 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json]
+2023-01-23 00:07:54.919 TRACE 27943 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [springfox.documentation.swagger.web.SecurityConfiguration@2719238f]
+2023-01-23 00:07:54.920 TRACE 27943 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:07:54.921 TRACE 27943 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:07:54.921 DEBUG 27943 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:07:54.921 DEBUG 27943 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /swagger-resources/configuration/security]
+2023-01-23 00:07:54.930 DEBUG 27943 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /swagger-resources]
+2023-01-23 00:07:54.930 TRACE 27943 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/swagger-resources", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:07:54.931 TRACE 27943 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to springfox.documentation.swagger.web.ApiResourceController#swaggerResources()
+2023-01-23 00:07:54.931 TRACE 27943 --- [http-nio-8080-exec-4] o.s.web.method.HandlerMethod             : Arguments: []
+2023-01-23 00:07:54.932 DEBUG 27943 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json]
+2023-01-23 00:07:54.933 TRACE 27943 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[springfox.documentation.swagger.web.SwaggerResource@4b491d68]]
+2023-01-23 00:07:54.936 TRACE 27943 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:07:54.936 TRACE 27943 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:07:54.937 DEBUG 27943 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:07:54.938 DEBUG 27943 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /swagger-resources]
+2023-01-23 00:07:54.956 DEBUG 27943 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /v3/api-docs/swagger-config]
+2023-01-23 00:07:54.956 TRACE 27943 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs/swagger-config", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:07:54.957  WARN 27943 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /v3/api-docs/swagger-config
+2023-01-23 00:07:54.958 DEBUG 27943 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={}
+2023-01-23 00:07:54.958 DEBUG 27943 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /v3/api-docs/swagger-config]
+2023-01-23 00:07:54.961 TRACE 27943 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:07:54.963 TRACE 27943 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+2023-01-23 00:07:54.963 TRACE 27943 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-01-23 00:07:54.966 TRACE 27943 --- [http-nio-8080-exec-5] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.core.ApplicationHttpRequest@325a8dc2]
+2023-01-23 00:07:54.970 DEBUG 27943 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:07:54.970 TRACE 27943 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Jan 23 00:07:54 YEKT 2023, status=404, error=Not Found, message=No message available, path=/v3/api-docs/swagger-config}]
+2023-01-23 00:07:54.976 TRACE 27943 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:07:54.977 TRACE 27943 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:07:54.977 DEBUG 27943 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404, headers={masked}
+2023-01-23 00:07:54.980 DEBUG 27943 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /v3/api-docs/swagger-config]
+2023-01-23 00:07:54.981 TRACE 27943 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs/swagger-config", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:07:54.982  WARN 27943 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /v3/api-docs/swagger-config
+2023-01-23 00:07:54.982 DEBUG 27943 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={}
+2023-01-23 00:07:54.982 DEBUG 27943 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /v3/api-docs/swagger-config]
+2023-01-23 00:07:54.983 TRACE 27943 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:07:54.984 TRACE 27943 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+2023-01-23 00:07:54.984 TRACE 27943 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-01-23 00:07:54.985 TRACE 27943 --- [http-nio-8080-exec-6] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.core.ApplicationHttpRequest@6ff0928f]
+2023-01-23 00:07:54.986 DEBUG 27943 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:07:54.986 TRACE 27943 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Jan 23 00:07:54 YEKT 2023, status=404, error=Not Found, message=No message available, path=/v3/api-docs/swagger-config}]
+2023-01-23 00:07:54.987 TRACE 27943 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:07:54.988 TRACE 27943 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:07:54.989 DEBUG 27943 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404, headers={masked}
+2023-01-23 00:07:55.022 DEBUG 27943 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /v3/api-docs]
+2023-01-23 00:07:55.023 TRACE 27943 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:07:55.024 TRACE 27943 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to springfox.documentation.oas.web.OpenApiControllerWebMvc#getDocumentation(String, HttpServletRequest)
+2023-01-23 00:07:55.036 TRACE 27943 --- [http-nio-8080-exec-7] o.s.web.method.HandlerMethod             : Arguments: [null, org.springframework.web.util.ContentCachingRequestWrapper@c8cfb6f]
+2023-01-23 00:07:55.223 DEBUG 27943 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, */*] and supported [application/json, application/hal+json]
+2023-01-23 00:07:55.225 TRACE 27943 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [springfox.documentation.spring.web.json.Json@860f2b8]
+2023-01-23 00:07:55.228 TRACE 27943 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:07:55.228 TRACE 27943 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:07:55.229 DEBUG 27943 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:07:55.230 DEBUG 27943 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /v3/api-docs]
+2023-01-23 00:07:55.232 DEBUG 27943 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /v3/api-docs]
+2023-01-23 00:07:55.232 TRACE 27943 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:07:55.234 TRACE 27943 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to springfox.documentation.oas.web.OpenApiControllerWebMvc#getDocumentation(String, HttpServletRequest)
+2023-01-23 00:07:55.235 TRACE 27943 --- [http-nio-8080-exec-8] o.s.web.method.HandlerMethod             : Arguments: [null, org.springframework.web.util.ContentCachingRequestWrapper@7a1b89e8]
+2023-01-23 00:07:55.280 DEBUG 27943 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, */*] and supported [application/json, application/hal+json]
+2023-01-23 00:07:55.281 TRACE 27943 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [springfox.documentation.spring.web.json.Json@5ba9a7ca]
+2023-01-23 00:07:55.285 TRACE 27943 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:07:55.285 TRACE 27943 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:07:55.286 DEBUG 27943 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:07:55.287 DEBUG 27943 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /v3/api-docs]
+2023-01-23 00:08:04.000 DEBUG 27943 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /stats]
+2023-01-23 00:08:04.000 TRACE 27943 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/stats", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:08:04.001 TRACE 27943 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ru.embedika.test.embedikatest.controllers.StatsController#getAllStats()
+2023-01-23 00:08:04.003 TRACE 27943 --- [http-nio-8080-exec-9] o.s.web.method.HandlerMethod             : Arguments: []
+2023-01-23 00:08:04.168 DEBUG 27943 --- [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:08:04.169 TRACE 27943 --- [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-01-23 00:08:04.170 TRACE 27943 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:08:04.170 TRACE 27943 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:08:04.171 DEBUG 27943 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:08:04.171 DEBUG 27943 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /stats]
+2023-01-23 00:08:10.457 DEBUG 27943 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /car]
+2023-01-23 00:08:10.457 TRACE 27943 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/car", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:08:10.458 TRACE 27943 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ru.embedika.test.embedikatest.controllers.CarController#getAllCar()
+2023-01-23 00:08:10.459 TRACE 27943 --- [http-nio-8080-exec-10] o.s.web.method.HandlerMethod             : Arguments: []
+2023-01-23 00:08:10.473 DEBUG 27943 --- [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:08:10.474 TRACE 27943 --- [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+2023-01-23 00:08:10.475 TRACE 27943 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:08:10.475 TRACE 27943 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:08:10.476 DEBUG 27943 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:08:10.476 DEBUG 27943 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /car]
+2023-01-23 00:08:16.447 DEBUG 27943 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [POST /car]
+2023-01-23 00:08:16.448 TRACE 27943 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/car", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:08:16.448 TRACE 27943 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ru.embedika.test.embedikatest.controllers.CarController#createCar(CarDTO)
+2023-01-23 00:08:16.505 TRACE 27943 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CarDTO(id=0, number=string, brand=string, colour=string, year=string, mileage=0, price=0)]
+2023-01-23 00:08:16.568  WARN 27943 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public ru.embedika.test.embedikatest.dto.CarDTO ru.embedika.test.embedikatest.controllers.CarController.createCar(ru.embedika.test.embedikatest.dto.CarDTO) with 3 errors: [Field error in object 'carDTO' on field 'number': rejected value [string]; codes [Pattern.carDTO.number,Pattern.number,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [carDTO.number,number]; arguments []; default message [number],[Ljavax.validation.constraints.Pattern$Flag;@472e52c1,^[АВЕКМНОРСТУХ]{2}\d{3}[АВЕКМНОРСТУХ]\d{2,3}]; default message [Введите регистрационный знак машины по ГОСТу]] [Field error in object 'carDTO' on field 'year': rejected value [string]; codes [Pattern.carDTO.year,Pattern.year,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [carDTO.year,year]; arguments []; default message [year],[Ljavax.validation.constraints.Pattern$Flag;@472e52c1,((19|20)\d\d)]; default message [Введите год в верном формате]] [Field error in object 'carDTO' on field 'price': rejected value [0]; codes [Positive.carDTO.price,Positive.price,Positive.long,Positive]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [carDTO.price,price]; arguments []; default message [price]]; default message [Введите положительное число]] ]
+2023-01-23 00:08:16.569 TRACE 27943 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:08:16.569 DEBUG 27943 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST, headers={}
+2023-01-23 00:08:16.569 DEBUG 27943 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : POST /car, payload={"brand":"string","colour":"string","id":0,"mileage":0,"number":"string","price":0,"year":"string"}]
+2023-01-23 00:08:16.571 TRACE 27943 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:08:16.572 TRACE 27943 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+2023-01-23 00:08:16.572 TRACE 27943 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-01-23 00:08:16.573 TRACE 27943 --- [http-nio-8080-exec-1] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.core.ApplicationHttpRequest@7f163e68]
+2023-01-23 00:08:16.576 DEBUG 27943 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:08:16.577 TRACE 27943 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Jan 23 00:08:16 YEKT 2023, status=400, error=Bad Request, trace=org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public ru.embedika.test.embedikatest.dto.CarDTO ru.embedika.test.embedikatest.controllers.CarController.createCar(ru.embedika.test.embedikatest.dto.CarDTO) with 3 errors: [Field error in object 'carDTO' on field 'number': rejected value [string]; codes [Pattern.carDTO.number,Pattern.number,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [carDTO.number,number]; arguments []; default message [number],[Ljavax.validation.constraints.Pattern$Flag;@472e52c1,^[АВЕКМНОРСТУХ]{2}\d{3}[АВЕКМНОРСТУХ]\d{2,3}]; default message [Введите регистрационный знак машины по ГОСТу]] [Field error in object 'carDTO' on field 'year': rejected value [string]; codes [Pattern.carDTO.year,Pattern.year,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [carDTO.year,year]; arguments []; default message [year],[Ljavax.validation.constraints.Pattern$Flag;@472e52c1,((19|20)\d\d)]; default message [Введите год в верном формате]] [Field error in object 'carDTO' on field 'price': rejected value [0]; codes [Positive.carDTO.price,Positive.price,Positive.long,Positive]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [carDTO.price,price]; arguments []; default message [price]]; default message [Введите положительное число]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:139)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.AbstractRequestLoggingFilter.doFilterInternal(AbstractRequestLoggingFilter.java:289)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+, message=Validation failed for object='carDTO'. Error count: 3, errors=[Field error in object 'carDTO' on field 'number': rejected value [string]; codes [Pattern.carDTO.number,Pattern.number,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [carDTO.number,number]; arguments []; default message [number],[Ljavax.validation.constraints.Pattern$Flag;@472e52c1,^[АВЕКМНОРСТУХ]{2}\d{3}[АВЕКМНОРСТУХ]\d{2,3}]; default message [Введите регистрационный знак машины по ГОСТу], Field error in object 'carDTO' on field 'year': rejected value [string]; codes [Pattern.carDTO.year,Pattern.year,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [carDTO.year,year]; arguments []; default message [year],[Ljavax.validation.constraints.Pattern$Flag;@472e52c1,((19|20)\d\d)]; default message [Введите год в верном формате], Field error in object 'carDTO' on field 'price': rejected value [0]; codes [Positive.carDTO.price,Positive.price,Positive.long,Positive]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [carDTO.price,price]; arguments []; default message [price]]; default message [Введите положительное число]], path=/car}]
+2023-01-23 00:08:16.591 TRACE 27943 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:08:16.591 TRACE 27943 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:08:16.591 DEBUG 27943 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 400, headers={masked}
+2023-01-23 00:08:46.467  INFO 27943 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:08:46.472  INFO 27943 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-23 00:08:46.487  INFO 27943 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-23 00:11:22.229  INFO 28185 --- [restartedMain] r.e.t.e.EmbedikatestApplication          : Starting EmbedikatestApplication using Java 17.0.5 on dmitry-NBLK-WAX9X with PID 28185 (/home/dmitry/Documents/Java/project/embedikatest/target/classes started by dmitry in /home/dmitry/Documents/Java/project/embedikatest)
+2023-01-23 00:11:22.232  INFO 28185 --- [restartedMain] r.e.t.e.EmbedikatestApplication          : No active profile set, falling back to default profiles: default
+2023-01-23 00:11:22.324  INFO 28185 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-23 00:11:23.757  INFO 28185 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:11:23.827  INFO 28185 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 2 JPA repository interfaces.
+2023-01-23 00:11:24.753  INFO 28185 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-23 00:11:24.764  INFO 28185 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-23 00:11:24.765  INFO 28185 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2023-01-23 00:11:24.842  INFO 28185 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-23 00:11:24.843  INFO 28185 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2517 ms
+2023-01-23 00:11:25.050 TRACE 28185 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Added existing Filter initializer bean 'webMvcMetricsFilter'; order=-2147483647, resource=class path resource [org/springframework/boot/actuate/autoconfigure/metrics/web/servlet/WebMvcMetricsAutoConfiguration.class]
+2023-01-23 00:11:25.051 TRACE 28185 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]
+2023-01-23 00:11:25.052 TRACE 28185 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Added existing ServletContextInitializer initializer bean 'servletEndpointRegistrar'; order=2147483647, resource=class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration.class]
+2023-01-23 00:11:25.084 TRACE 28185 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/HttpEncodingAutoConfiguration.class]
+2023-01-23 00:11:25.084 TRACE 28185 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'logFilter'; order=2147483647, resource=class path resource [ru/embedika/test/embedikatest/configuration/WebMvcConfiguraitor.class]
+2023-01-23 00:11:25.091 DEBUG 28185 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: filterRegistrationBean urls=[/*] order=-2147483647, characterEncodingFilter urls=[/*] order=-2147483648, logFilter urls=[/*] order=2147483647
+2023-01-23 00:11:25.092 DEBUG 28185 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2023-01-23 00:11:25.118 DEBUG 28185 --- [restartedMain] o.s.w.f.CommonsRequestLoggingFilter      : Filter 'logFilter' configured for use
+2023-01-23 00:11:25.291  INFO 28185 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:11:25.350  INFO 28185 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2023-01-23 00:11:25.474  INFO 28185 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-23 00:11:25.581  INFO 28185 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-23 00:11:25.935  INFO 28185 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-23 00:11:25.953  INFO 28185 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2023-01-23 00:11:26.702  INFO 28185 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:11:26.710  INFO 28185 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:11:26.766  INFO 28185 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-23 00:11:27.628  WARN 28185 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:11:27.726 TRACE 28185 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	r.e.t.e.c.CarController:
+	{GET [/car]}: getAllCar()
+	{GET [/car/{id}]}: getCar(Integer)
+	{POST [/car]}: createCar(CarDTO)
+	{PUT [/car/{id}]}: upgradeCar(Integer,CarDTO)
+	{DELETE [/car/{id}]}: deleteCar(Integer)
+	{GET [/carByOrderByPriceDesc]}: getAllByOrderByPriceDesc()
+	{GET [/carByOrderByPriceAsc]}: getAllByOrderByPriceAsc()
+	{GET [/carByOrderByMileageDesc]}: getAllByOrderByMileageDesc()
+	{GET [/carByOrderByMileageAsc]}: getAllByOrderByMileageAsc()
+	{GET [/carByOrderByYearDesc]}: getAllByOrderByYearDesc()
+	{GET [/carByOrderByYearAsc]}: getAllByOrderByYearAsc()
+2023-01-23 00:11:27.730 TRACE 28185 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	r.e.t.e.c.StatsController:
+	{GET [/stats]}: getAllStats()
+2023-01-23 00:11:27.732 TRACE 28185 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-01-23 00:11:27.735 TRACE 28185 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+2023-01-23 00:11:27.737 TRACE 28185 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-01-23 00:11:27.742 TRACE 28185 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-01-23 00:11:27.746 DEBUG 28185 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2023-01-23 00:11:27.962  INFO 28185 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-01-23 00:11:27.967 TRACE 28185 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Register "{GET [/actuator/health], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}" to java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2023-01-23 00:11:27.968 TRACE 28185 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Register "{GET [/actuator/health/**], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}" to java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2023-01-23 00:11:27.969 TRACE 28185 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Register "{GET [/actuator/info], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}" to java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2023-01-23 00:11:27.971 TRACE 28185 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Register "{GET [/actuator/prometheus], produces [text/plain;version=0.0.4;charset=utf-8]}" to java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2023-01-23 00:11:27.972 TRACE 28185 --- [restartedMain] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Register "{GET [/actuator], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}" to public java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping$WebMvcLinksHandler.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-01-23 00:11:28.064 TRACE 28185 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui/] onto ParameterizableViewController [view="forward:/swagger-ui/index.html"]
+2023-01-23 00:11:28.064 DEBUG 28185 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/] in 'viewControllerHandlerMapping'
+2023-01-23 00:11:28.073 DEBUG 28185 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2023-01-23 00:11:28.098 TRACE 28185 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui/**] onto ResourceHttpRequestHandler [class path resource [META-INF/resources/webjars/springfox-swagger-ui/]]
+2023-01-23 00:11:28.099 DEBUG 28185 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/**] in 'resourceHandlerMapping'
+2023-01-23 00:11:28.146 DEBUG 28185 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-01-23 00:11:28.200 DEBUG 28185 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-01-23 00:11:28.646  INFO 28185 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-23 00:11:29.065  INFO 28185 --- [restartedMain] r.e.t.e.EmbedikatestApplication          : Started EmbedikatestApplication in 7.321 seconds (JVM running for 8.202)
+2023-01-23 00:11:32.737  INFO 28185 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:11:32.737  INFO 28185 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-23 00:11:32.738 TRACE 28185 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.multipart.support.StandardServletMultipartResolver@7bb3d2c3
+2023-01-23 00:11:32.738 TRACE 28185 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@5ceafa20
+2023-01-23 00:11:32.738 TRACE 28185 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.theme.FixedThemeResolver@7cdeb47c
+2023-01-23 00:11:32.739 TRACE 28185 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected DefaultRequestToViewNameTranslator
+2023-01-23 00:11:32.740 TRACE 28185 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected SessionFlashMapManager
+2023-01-23 00:11:32.741 DEBUG 28185 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-01-23 00:11:32.741  INFO 28185 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-01-23 00:11:32.750 DEBUG 28185 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [POST /car]
+2023-01-23 00:11:32.757 TRACE 28185 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/car", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:11:32.762 TRACE 28185 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ru.embedika.test.embedikatest.controllers.CarController#createCar(CarDTO)
+2023-01-23 00:11:32.832 TRACE 28185 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CarDTO(id=0, number=АА658А76, brand=лада, colour=желтый, year=1998, mileage=0, price=230)]
+2023-01-23 00:11:32.889 TRACE 28185 --- [http-nio-8080-exec-1] o.s.web.method.HandlerMethod             : Arguments: [CarDTO(id=0, number=АА658А76, brand=лада, colour=желтый, year=1998, mileage=0, price=230)]
+2023-01-23 00:11:33.218 DEBUG 28185 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:11:33.219 TRACE 28185 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [CarDTO(id=1, number=АА658А76, brand=лада, colour=желтый, year=1998, mileage=0, price=230)]
+2023-01-23 00:11:33.234 TRACE 28185 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:11:33.235 TRACE 28185 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:11:33.235 DEBUG 28185 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:11:33.236 DEBUG 28185 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : POST /car, payload={"brand":"лада","colour":"желтый","id":0,"mileage":0,"number":"АА658А76","price":230,"year":"1998"}]
+2023-01-23 00:11:39.961 DEBUG 28185 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /car]
+2023-01-23 00:11:39.962 TRACE 28185 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/car", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:11:39.964 TRACE 28185 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ru.embedika.test.embedikatest.controllers.CarController#getAllCar()
+2023-01-23 00:11:39.965 TRACE 28185 --- [http-nio-8080-exec-2] o.s.web.method.HandlerMethod             : Arguments: []
+2023-01-23 00:11:39.990 DEBUG 28185 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:11:39.991 TRACE 28185 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [[CarDTO(id=1, number=АА658А76, brand=лада, colour=желтый, year=1998, mileage=0, price=230)]]
+2023-01-23 00:11:39.994 TRACE 28185 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:11:39.994 TRACE 28185 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:11:39.994 DEBUG 28185 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:11:39.994 DEBUG 28185 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /car]
+2023-01-23 00:11:47.669 DEBUG 28185 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /stats]
+2023-01-23 00:11:47.670 TRACE 28185 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/stats", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:11:47.671 TRACE 28185 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ru.embedika.test.embedikatest.controllers.StatsController#getAllStats()
+2023-01-23 00:11:47.672 TRACE 28185 --- [http-nio-8080-exec-3] o.s.web.method.HandlerMethod             : Arguments: []
+2023-01-23 00:11:47.689 DEBUG 28185 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:11:47.695 TRACE 28185 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO(id=1, countAllCars=1, countNewCars=1)]]
+2023-01-23 00:11:47.699 TRACE 28185 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:11:47.699 TRACE 28185 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:11:47.700 DEBUG 28185 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:11:47.700 DEBUG 28185 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /stats]
+2023-01-23 00:12:13.676 DEBUG 28185 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [POST /car]
+2023-01-23 00:12:13.677 TRACE 28185 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/car", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:12:13.678 TRACE 28185 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ru.embedika.test.embedikatest.controllers.CarController#createCar(CarDTO)
+2023-01-23 00:12:13.679 TRACE 28185 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CarDTO(id=0, number=АА658Р76, brand=уаз, colour=синий, year=2000, mileage=230, price=2030)]
+2023-01-23 00:12:13.681 TRACE 28185 --- [http-nio-8080-exec-4] o.s.web.method.HandlerMethod             : Arguments: [CarDTO(id=0, number=АА658Р76, brand=уаз, colour=синий, year=2000, mileage=230, price=2030)]
+2023-01-23 00:12:13.715 DEBUG 28185 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:12:13.715 TRACE 28185 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [CarDTO(id=2, number=АА658Р76, brand=уаз, colour=синий, year=2000, mileage=230, price=2030)]
+2023-01-23 00:12:13.716 TRACE 28185 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:12:13.716 TRACE 28185 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:12:13.717 DEBUG 28185 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:12:13.718 DEBUG 28185 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : POST /car, payload={"brand":"уаз","colour":"синий","id":0,"mileage":230,"number":"АА658Р76","price":2030,"year":"2000"}]
+2023-01-23 00:12:18.945 DEBUG 28185 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /car]
+2023-01-23 00:12:18.946 TRACE 28185 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/car", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:12:18.947 TRACE 28185 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ru.embedika.test.embedikatest.controllers.CarController#getAllCar()
+2023-01-23 00:12:18.949 TRACE 28185 --- [http-nio-8080-exec-5] o.s.web.method.HandlerMethod             : Arguments: []
+2023-01-23 00:12:18.959 DEBUG 28185 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:12:18.960 TRACE 28185 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [[CarDTO(id=1, number=АА658А76, brand=лада, colour=желтый, year=1998, mileage=0, price=230), CarDTO(id=2, number=АА658Р76, brand=уаз, colour=синий, year=2000, mileage=230, price=2030)]]
+2023-01-23 00:12:18.962 TRACE 28185 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:12:18.963 TRACE 28185 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:12:18.964 DEBUG 28185 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:12:18.964 DEBUG 28185 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /car]
+2023-01-23 00:12:24.084 DEBUG 28185 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /stats]
+2023-01-23 00:12:24.085 TRACE 28185 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/stats", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:12:24.086 TRACE 28185 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ru.embedika.test.embedikatest.controllers.StatsController#getAllStats()
+2023-01-23 00:12:24.087 TRACE 28185 --- [http-nio-8080-exec-6] o.s.web.method.HandlerMethod             : Arguments: []
+2023-01-23 00:12:24.094 DEBUG 28185 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:12:24.094 TRACE 28185 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO(id=1, countAllCars=2, countNewCars=1)]]
+2023-01-23 00:12:24.096 TRACE 28185 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:12:24.096 TRACE 28185 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:12:24.097 DEBUG 28185 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:12:24.098 DEBUG 28185 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /stats]
+2023-01-23 00:12:51.505 DEBUG 28185 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : Before request [PUT /car/1]
+2023-01-23 00:12:51.505 TRACE 28185 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : PUT "/car/1", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:12:51.506 TRACE 28185 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ru.embedika.test.embedikatest.controllers.CarController#upgradeCar(Integer, CarDTO)
+2023-01-23 00:12:51.509 TRACE 28185 --- [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CarDTO(id=1, number=АА658А76, brand=лада, colour=желтый, year=1998, mileage=20, price=230)]
+2023-01-23 00:12:51.510 TRACE 28185 --- [http-nio-8080-exec-7] o.s.web.method.HandlerMethod             : Arguments: [1, CarDTO(id=1, number=АА658А76, brand=лада, colour=желтый, year=1998, mileage=20, price=230)]
+2023-01-23 00:12:51.528 DEBUG 28185 --- [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:12:51.529 TRACE 28185 --- [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [CarDTO(id=1, number=АА658А76, brand=лада, colour=желтый, year=1998, mileage=20, price=230)]
+2023-01-23 00:12:51.531 TRACE 28185 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:12:51.531 TRACE 28185 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:12:51.532 DEBUG 28185 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:12:51.532 DEBUG 28185 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : PUT /car/1, payload={"id":1,"number":"АА658А76","brand":"лада","colour":"желтый","year":"1998","mileage":20,"price":230}]
+2023-01-23 00:12:55.509 DEBUG 28185 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /stats]
+2023-01-23 00:12:55.509 TRACE 28185 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/stats", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:12:55.510 TRACE 28185 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ru.embedika.test.embedikatest.controllers.StatsController#getAllStats()
+2023-01-23 00:12:55.511 TRACE 28185 --- [http-nio-8080-exec-8] o.s.web.method.HandlerMethod             : Arguments: []
+2023-01-23 00:12:55.518 DEBUG 28185 --- [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:12:55.518 TRACE 28185 --- [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO(id=1, countAllCars=2, countNewCars=0)]]
+2023-01-23 00:12:55.520 TRACE 28185 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:12:55.520 TRACE 28185 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:12:55.521 DEBUG 28185 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:12:55.522 DEBUG 28185 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /stats]
+2023-01-23 00:13:21.550 DEBUG 28185 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /car/6]
+2023-01-23 00:13:21.551 TRACE 28185 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/car/6", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:13:21.552 TRACE 28185 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ru.embedika.test.embedikatest.controllers.CarController#getCar(Integer)
+2023-01-23 00:13:21.554 TRACE 28185 --- [http-nio-8080-exec-9] o.s.web.method.HandlerMethod             : Arguments: [6]
+2023-01-23 00:13:21.569 DEBUG 28185 --- [http-nio-8080-exec-9] .w.s.m.a.ResponseStatusExceptionResolver : Resolved [ru.embedika.test.embedikatest.exception.ResourceNotFoundException: Car not exist with id : 6]
+2023-01-23 00:13:21.569 TRACE 28185 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:13:21.570 DEBUG 28185 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={}
+2023-01-23 00:13:21.570 DEBUG 28185 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /car/6]
+2023-01-23 00:13:21.576 TRACE 28185 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:13:21.580 TRACE 28185 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+2023-01-23 00:13:21.580 TRACE 28185 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-01-23 00:13:21.585 TRACE 28185 --- [http-nio-8080-exec-9] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.core.ApplicationHttpRequest@174d0db7]
+2023-01-23 00:13:21.595 DEBUG 28185 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:13:21.595 TRACE 28185 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Jan 23 00:13:21 YEKT 2023, status=404, error=Not Found, trace=ru.embedika.test.embedikatest.exception.ResourceNotFoundException: Car not exist with id : 6
+	at ru.embedika.test.embedikatest.services.impl.CarServiceImpl.findById(CarServiceImpl.java:57)
+	at ru.embedika.test.embedikatest.services.impl.CarServiceImpl$$FastClassBySpringCGLIB$$9c810896.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at io.micrometer.core.aop.TimedAspect.processWithTimer(TimedAspect.java:119)
+	at io.micrometer.core.aop.TimedAspect.timedMethod(TimedAspect.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at ru.embedika.test.embedikatest.services.impl.CarServiceImpl$$EnhancerBySpringCGLIB$$974e0269.findById(<generated>)
+	at ru.embedika.test.embedikatest.controllers.CarController.getCar(CarController.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.AbstractRequestLoggingFilter.doFilterInternal(AbstractRequestLoggingFilter.java:289)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+, message=Car not exist with id : 6, path=/car/6}]
+2023-01-23 00:13:21.604 TRACE 28185 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:13:21.604 TRACE 28185 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:13:21.604 DEBUG 28185 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404, headers={masked}
+2023-01-23 00:13:24.995 DEBUG 28185 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /car/2]
+2023-01-23 00:13:24.996 TRACE 28185 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/car/2", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:13:24.997 TRACE 28185 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ru.embedika.test.embedikatest.controllers.CarController#getCar(Integer)
+2023-01-23 00:13:24.998 TRACE 28185 --- [http-nio-8080-exec-10] o.s.web.method.HandlerMethod             : Arguments: [2]
+2023-01-23 00:13:25.006 DEBUG 28185 --- [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:13:25.006 TRACE 28185 --- [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [CarDTO(id=2, number=АА658Р76, brand=уаз, colour=синий, year=2000, mileage=230, price=2030)]
+2023-01-23 00:13:25.008 TRACE 28185 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:13:25.009 TRACE 28185 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:13:25.009 DEBUG 28185 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:13:25.010 DEBUG 28185 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /car/2]
+2023-01-23 00:13:33.734 DEBUG 28185 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [DELETE /car/2]
+2023-01-23 00:13:33.734 TRACE 28185 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : DELETE "/car/2", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:13:33.735 TRACE 28185 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ru.embedika.test.embedikatest.controllers.CarController#deleteCar(Integer)
+2023-01-23 00:13:33.736 TRACE 28185 --- [http-nio-8080-exec-1] o.s.web.method.HandlerMethod             : Arguments: [2]
+2023-01-23 00:13:33.766 DEBUG 28185 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:13:33.766 TRACE 28185 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [true]
+2023-01-23 00:13:33.769 TRACE 28185 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:13:33.770 TRACE 28185 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:13:33.770 DEBUG 28185 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:13:33.771 DEBUG 28185 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : DELETE /car/2]
+2023-01-23 00:13:38.641 DEBUG 28185 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /stats]
+2023-01-23 00:13:38.641 TRACE 28185 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/stats", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:13:38.642 TRACE 28185 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ru.embedika.test.embedikatest.controllers.StatsController#getAllStats()
+2023-01-23 00:13:38.643 TRACE 28185 --- [http-nio-8080-exec-2] o.s.web.method.HandlerMethod             : Arguments: []
+2023-01-23 00:13:38.650 DEBUG 28185 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:13:38.651 TRACE 28185 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO(id=1, countAllCars=1, countNewCars=0)]]
+2023-01-23 00:13:38.652 TRACE 28185 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:13:38.652 TRACE 28185 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:13:38.653 DEBUG 28185 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:13:38.653 DEBUG 28185 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /stats]
+2023-01-23 00:14:06.205 DEBUG 28185 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [POST /car]
+2023-01-23 00:14:06.206 TRACE 28185 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/car", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:14:06.207 TRACE 28185 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ru.embedika.test.embedikatest.controllers.CarController#createCar(CarDTO)
+2023-01-23 00:14:06.209 TRACE 28185 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CarDTO(id=0, number=АА678Р76, brand=уаз, colour=синий, year=2000, mileage=0, price=20300)]
+2023-01-23 00:14:06.210 TRACE 28185 --- [http-nio-8080-exec-3] o.s.web.method.HandlerMethod             : Arguments: [CarDTO(id=0, number=АА678Р76, brand=уаз, colour=синий, year=2000, mileage=0, price=20300)]
+2023-01-23 00:14:06.231 DEBUG 28185 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:14:06.232 TRACE 28185 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [CarDTO(id=3, number=АА678Р76, brand=уаз, colour=синий, year=2000, mileage=0, price=20300)]
+2023-01-23 00:14:06.234 TRACE 28185 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:14:06.235 TRACE 28185 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:14:06.235 DEBUG 28185 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:14:06.236 DEBUG 28185 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : POST /car, payload={"brand":"уаз","colour":"синий","id":0,"mileage":0,"number":"АА678Р76","price":20300,"year":"2000"}]
+2023-01-23 00:14:11.529 DEBUG 28185 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /stats]
+2023-01-23 00:14:11.529 TRACE 28185 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/stats", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:14:11.530 TRACE 28185 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ru.embedika.test.embedikatest.controllers.StatsController#getAllStats()
+2023-01-23 00:14:11.530 TRACE 28185 --- [http-nio-8080-exec-4] o.s.web.method.HandlerMethod             : Arguments: []
+2023-01-23 00:14:11.538 DEBUG 28185 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:14:11.538 TRACE 28185 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [[StatsDTO(id=1, countAllCars=2, countNewCars=1)]]
+2023-01-23 00:14:11.539 TRACE 28185 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:14:11.540 TRACE 28185 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:14:11.540 DEBUG 28185 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:14:11.540 DEBUG 28185 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /stats]
+2023-01-23 00:14:19.346 DEBUG 28185 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /carByOrderByMileageAsc]
+2023-01-23 00:14:19.347 TRACE 28185 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/carByOrderByMileageAsc", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:14:19.347 TRACE 28185 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ru.embedika.test.embedikatest.controllers.CarController#getAllByOrderByMileageAsc()
+2023-01-23 00:14:19.348 TRACE 28185 --- [http-nio-8080-exec-5] o.s.web.method.HandlerMethod             : Arguments: []
+2023-01-23 00:14:19.364 DEBUG 28185 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:14:19.364 TRACE 28185 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [[CarDTO(id=3, number=АА678Р76, brand=уаз, colour=синий, year=2000, mileage=0, price=20300), CarDTO(id=1, number=АА658А76, brand=лада, colour=желтый, year=1998, mileage=20, price=230)]]
+2023-01-23 00:14:19.366 TRACE 28185 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:14:19.366 TRACE 28185 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:14:19.367 DEBUG 28185 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:14:19.367 DEBUG 28185 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /carByOrderByMileageAsc]
+2023-01-23 00:14:31.981 DEBUG 28185 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /carByOrderByMileageDesc]
+2023-01-23 00:14:31.981 TRACE 28185 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/carByOrderByMileageDesc", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:14:31.982 TRACE 28185 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to ru.embedika.test.embedikatest.controllers.CarController#getAllByOrderByMileageDesc()
+2023-01-23 00:14:31.983 TRACE 28185 --- [http-nio-8080-exec-6] o.s.web.method.HandlerMethod             : Arguments: []
+2023-01-23 00:14:32.002 DEBUG 28185 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-01-23 00:14:32.003 TRACE 28185 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [[CarDTO(id=1, number=АА658А76, brand=лада, colour=желтый, year=1998, mileage=20, price=230), CarDTO(id=3, number=АА678Р76, brand=уаз, colour=синий, year=2000, mileage=0, price=20300)]]
+2023-01-23 00:14:32.007 TRACE 28185 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-01-23 00:14:32.007 TRACE 28185 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-01-23 00:14:32.007 DEBUG 28185 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-01-23 00:14:32.008 DEBUG 28185 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /carByOrderByMileageDesc]
+2023-01-23 00:14:40.763  INFO 28185 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:14:40.773  INFO 28185 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-23 00:14:40.816  INFO 28185 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

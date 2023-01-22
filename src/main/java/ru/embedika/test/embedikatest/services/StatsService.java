@@ -6,8 +6,4 @@ import java.util.List;
 
 public interface StatsService {
     List<StatsDTO> findAll();
-
-    StatsDTO save(StatsDTO statsDTO);
-
-    StatsDTO findById(Integer id);
 }

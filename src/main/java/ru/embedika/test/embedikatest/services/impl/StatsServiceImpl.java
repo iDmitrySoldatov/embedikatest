@@ -11,13 +11,11 @@ import ru.embedika.test.embedikatest.repositories.StatsRepository;
 import ru.embedika.test.embedikatest.services.StatsService;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @Transactional(readOnly = true)
 public class StatsServiceImpl implements StatsService {
     private StatsRepository repository;
-
     private ConvertDTO convertDTO;
 
     @Autowired
@@ -31,20 +29,5 @@ public class StatsServiceImpl implements StatsService {
     public List<StatsDTO> findAll() {
         List<Stats> statsList = repository.findAll();
         return convertDTO.convertListToStatsDTO(statsList);
-    }
-
-    @Override
-    @Transactional
-    @Timed("timeSaveStats")
-    public StatsDTO save(StatsDTO statsDTO) {
-        Stats stats = repository.save(convertDTO.convertToStats(statsDTO));
-        return convertDTO.convertToStatsDTO(stats);
-    }
-
-    @Override
-    @Timed("timeFindByIdStats")
-    public StatsDTO findById(Integer id) {
-        Optional<Stats> optionalStats = repository.findById(id);
-        return !optionalStats.isEmpty() ? convertDTO.convertToStatsDTO(optionalStats.get()) : null;
     }
 }

@@ -1,6 +1,5 @@
 package ru.embedika.test.embedikatest.services;
 
-import io.micrometer.core.annotation.Timed;
 import ru.embedika.test.embedikatest.dto.CarDTO;
 
 import java.util.List;

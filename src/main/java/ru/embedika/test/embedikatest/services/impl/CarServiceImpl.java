@@ -11,9 +11,10 @@ import ru.embedika.test.embedikatest.dto.convert.ConvertDTO;
 import ru.embedika.test.embedikatest.exception.CarExistException;
 import ru.embedika.test.embedikatest.exception.ResourceNotFoundException;
 import ru.embedika.test.embedikatest.models.Car;
+import ru.embedika.test.embedikatest.models.Stats;
 import ru.embedika.test.embedikatest.repositories.CarRepository;
+import ru.embedika.test.embedikatest.repositories.StatsRepository;
 import ru.embedika.test.embedikatest.services.CarService;
-import ru.embedika.test.embedikatest.services.StatsService;
 import springfox.documentation.annotations.Cacheable;
 
 import java.util.List;
@@ -24,14 +25,13 @@ import java.util.Optional;
 public class CarServiceImpl implements CarService {
 
     private CarRepository repository;
-
-    private StatsService statsService;
+    private StatsRepository statsRepository;
     private ConvertDTO convertDTO;
 
     @Autowired
-    public CarServiceImpl(CarRepository repository, StatsService statsService, ConvertDTO convertDTO) {
+    public CarServiceImpl(CarRepository repository, StatsRepository statsRepository, ConvertDTO convertDTO) {
         this.repository = repository;
-        this.statsService = statsService;
+        this.statsRepository = statsRepository;
         this.convertDTO = convertDTO;
     }
 
@@ -60,7 +60,7 @@ public class CarServiceImpl implements CarService {
     @CachePut(value = "create")
     public CarDTO create(CarDTO carDTO) {
         Car oldCar = repository.findByNumber(carDTO.getNumber());
-        if(oldCar != null)
+        if (oldCar != null)
             throw new CarExistException("A car with this number already exists");
 
         Car car = repository.save(convertDTO.convertToCar(carDTO));
@@ -152,15 +152,19 @@ public class CarServiceImpl implements CarService {
         if (car.getMileage() == 0)
             statsDTO.setCountNewCars(statsDTO.getCountNewCars() + 1);
 
-        statsService.save(statsDTO);
+        statsRepository.save(convertDTO.convertToStats(statsDTO));
     }
 
     private void updateStatsUpgradeCar(int oldMileage, int newMileage) {
-        if (oldMileage > 0 || newMileage == 0) return;
-
+        if (oldMileage == 0 && newMileage > 0) return;
+        if (oldMileage > 0 && newMileage == 0) {
+            StatsDTO statsDTO = getStatsDTO();
+            statsDTO.setCountNewCars(statsDTO.getCountNewCars() + 1);
+            statsRepository.save(convertDTO.convertToStats(statsDTO));
+        }
         StatsDTO statsDTO = getStatsDTO();
         statsDTO.setCountNewCars(statsDTO.getCountNewCars() - 1);
-        statsService.save(statsDTO);
+        statsRepository.save(convertDTO.convertToStats(statsDTO));
     }
 
     private void updateStatsDeleteCar(Car car) {
@@ -169,16 +173,17 @@ public class CarServiceImpl implements CarService {
         if (car.getMileage() == 0)
             statsDTO.setCountNewCars(statsDTO.getCountNewCars() - 1);
 
-        statsService.save(statsDTO);
+        statsRepository.save(convertDTO.convertToStats(statsDTO));
     }
 
     private StatsDTO getStatsDTO() {
-        StatsDTO statsDTO = statsService.findById(1);
-        if (statsDTO == null) {
-            statsDTO = new StatsDTO();
-            statsDTO.setId(1);
+        Optional<Stats> optionalStats = statsRepository.findById(1);
+        if (!optionalStats.isEmpty()) {
+            return convertDTO.convertToStatsDTO(optionalStats.get());
         }
-        return statsDTO;
+        Stats stats = new Stats();
+        stats.setId(1);
+        return convertDTO.convertToStatsDTO(stats);
     }
 }
 

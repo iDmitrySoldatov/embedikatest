@@ -1,7 +1,6 @@
 package ru.embedika.test.embedikatest.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.embedika.test.embedikatest.dto.CarDTO;
 import ru.embedika.test.embedikatest.services.CarService;
