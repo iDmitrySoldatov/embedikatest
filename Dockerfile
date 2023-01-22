@@ -1,12 +1,4 @@
-FROM bellsoft/liberica-openjdk-alpine-musl
-
+FROM amazoncorretto:17-alpine-jdk
 COPY ./target/embedikatest-0.0.1-SNAPSHOT.jar .
-
 CMD ["java","-jar","embedikatest-0.0.1-SNAPSHOT.jar"]
-
-
-#FROM openjdk:17
-#COPY ./target/embedikatest-0.0.1-SNAPSHOT.jar /usr/src/myapp
-#WORKDIR /usr/src/myapp
-#CMD ["java","-jar","embedikatest-0.0.1-SNAPSHOT.jar"]
 

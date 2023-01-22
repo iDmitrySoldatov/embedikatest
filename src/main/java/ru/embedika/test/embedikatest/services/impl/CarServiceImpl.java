@@ -155,8 +155,9 @@ public class CarServiceImpl implements CarService {
         statsService.save(statsDTO);
     }
 
-    private void updateStatsUpgradeCar(Integer oldMileage, Integer newMileage) {
+    private void updateStatsUpgradeCar(int oldMileage, int newMileage) {
         if (oldMileage > 0 || newMileage == 0) return;
+
         StatsDTO statsDTO = getStatsDTO();
         statsDTO.setCountNewCars(statsDTO.getCountNewCars() - 1);
         statsService.save(statsDTO);

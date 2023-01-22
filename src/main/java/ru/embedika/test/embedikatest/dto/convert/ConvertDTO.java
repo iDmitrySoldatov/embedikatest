@@ -32,7 +32,7 @@ public class ConvertDTO {
     public List<CarDTO> convertListToCarDTO(List<Car> carList) {
         List<CarDTO> carDTOList = new ArrayList<>(carList.size());
         for (Car car : carList) {
-            CarDTO carDTO = this.convertToCarDTO(car);
+            CarDTO carDTO = convertToCarDTO(car);
             carDTOList.add(carDTO);
         }
         return carDTOList;
@@ -49,7 +49,7 @@ public class ConvertDTO {
     public List<StatsDTO> convertListToStatsDTO(List<Stats> statsList) {
         List<StatsDTO> statsDTOList = new ArrayList<>(statsList.size());
         for (Stats stats : statsList) {
-            StatsDTO statsDTO = this.convertToStatsDTO(stats);
+            StatsDTO statsDTO = convertToStatsDTO(stats);
             statsDTOList.add(statsDTO);
         }
         return statsDTOList;

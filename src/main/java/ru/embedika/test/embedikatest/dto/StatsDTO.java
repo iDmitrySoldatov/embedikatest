@@ -7,8 +7,8 @@ import lombok.Data;
 public class StatsDTO {
     private Integer id;
 
-    private Integer countAllCars;
+    private int countAllCars;
 
-    private Integer countNewCars;
+    private int countNewCars;
 
 }

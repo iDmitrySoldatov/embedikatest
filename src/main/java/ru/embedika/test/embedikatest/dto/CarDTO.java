@@ -17,7 +17,7 @@ public class CarDTO {
     @Pattern(regexp = "((19|20)\\d\\d)", message = "Введите год в верном формате")
     private String year;
     @PositiveOrZero(message = "Введите положительное число")
-    private Integer mileage;
+    private int mileage;
     @Positive(message = "Введите положительное число")
-    private Long price;
+    private long price;
 }

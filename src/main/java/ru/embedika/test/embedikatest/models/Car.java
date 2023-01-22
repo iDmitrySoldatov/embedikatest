@@ -27,8 +27,8 @@ public class Car {
     private String year;
 
     @Column(name = "mileage")
-    private Integer mileage;
+    private int mileage;
 
     @Column(name = "price")
-    private Long price;
+    private long price;
 }

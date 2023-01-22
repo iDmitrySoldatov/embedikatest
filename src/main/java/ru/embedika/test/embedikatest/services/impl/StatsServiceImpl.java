@@ -29,14 +29,16 @@ public class StatsServiceImpl implements StatsService {
     @Override
     @Timed("timeFindAllStats")
     public List<StatsDTO> findAll() {
-        return convertDTO.convertListToStatsDTO(repository.findAll());
+        List<Stats> statsList = repository.findAll();
+        return convertDTO.convertListToStatsDTO(statsList);
     }
 
     @Override
     @Transactional
     @Timed("timeSaveStats")
     public StatsDTO save(StatsDTO statsDTO) {
-        return convertDTO.convertToStatsDTO(repository.save(convertDTO.convertToStats(statsDTO)));
+        Stats stats = repository.save(convertDTO.convertToStats(statsDTO));
+        return convertDTO.convertToStatsDTO(stats);
     }
 
     @Override

@@ -14,9 +14,9 @@ public class Stats {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(name = "count_all_cars")
-    private Integer countAllCars;
+    private int countAllCars;
     @Column(name = "count_new_cars")
-    private Integer countNewCars;
+    private int countNewCars;
 
 
 }
