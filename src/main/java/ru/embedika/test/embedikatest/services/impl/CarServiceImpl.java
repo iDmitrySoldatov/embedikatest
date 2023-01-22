@@ -8,13 +8,14 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.embedika.test.embedikatest.dto.CarDTO;
 import ru.embedika.test.embedikatest.dto.StatsDTO;
 import ru.embedika.test.embedikatest.dto.convert.ConvertDTO;
+import ru.embedika.test.embedikatest.exception.CarExistException;
+import ru.embedika.test.embedikatest.exception.ResourceNotFoundException;
 import ru.embedika.test.embedikatest.models.Car;
 import ru.embedika.test.embedikatest.repositories.CarRepository;
 import ru.embedika.test.embedikatest.services.CarService;
 import ru.embedika.test.embedikatest.services.StatsService;
 import springfox.documentation.annotations.Cacheable;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -38,12 +39,7 @@ public class CarServiceImpl implements CarService {
     @Timed("timeFindAllCar")
     public List<CarDTO> findAll() {
         List<Car> carList = repository.findAll();
-        List<CarDTO> carDTOList = new ArrayList<>(carList.size());
-        for (Car car : carList) {
-            CarDTO carDTO = convertDTO.convertToCarDTO(car);
-            carDTOList.add(carDTO);
-        }
-        return carDTOList;
+        return convertDTO.convertListToCarDTO(carList);
     }
 
 
@@ -52,125 +48,94 @@ public class CarServiceImpl implements CarService {
     @Cacheable(value = "findByID")
     public CarDTO findById(Integer id) {
         Optional<Car> optionalCar = repository.findById(id);
-        if (!optionalCar.isEmpty()) {
-            Car car = optionalCar.get();
-            CarDTO carDTO = convertDTO.convertToCarDTO(car);
-            return carDTO;
-        } else {
-            return null;
-        }
+        if (optionalCar.isEmpty())
+            throw new ResourceNotFoundException("Car not exist with id : " + id);
+
+        return convertDTO.convertToCarDTO(optionalCar.get());
     }
 
     @Override
     @Transactional
-    @Timed("timeSaveCar")
-    @CachePut(value = "save")
-    public CarDTO save(CarDTO carDTO) {
+    @Timed("timeCreateCar")
+    @CachePut(value = "create")
+    public CarDTO create(CarDTO carDTO) {
+        Car oldCar = repository.findByNumber(carDTO.getNumber());
+        if(oldCar != null)
+            throw new CarExistException("A car with this number already exists");
+
         Car car = repository.save(convertDTO.convertToCar(carDTO));
-        StatsDTO statsDTO = statsService.findById(1);
-        if (statsDTO == null) {
-            statsDTO = new StatsDTO();
-            statsDTO.setId(1);
-            statsDTO.setCountAllCars(1);
-            if (car.getMileage() == 0) statsDTO.setCountNewCars(1);
-            else statsDTO.setCountNewCars(0);
-            statsService.save(statsDTO);
-            return convertDTO.convertToCarDTO(car);
-        } else {
-            statsDTO.setCountAllCars(statsDTO.getCountAllCars() + 1);
-            if (car.getMileage() == 0) statsDTO.setCountNewCars(statsDTO.getCountNewCars() + 1);
-            statsService.save(statsDTO);
-            return convertDTO.convertToCarDTO(car);
-        }
+        updateStatsNewCar(car);
+        return convertDTO.convertToCarDTO(car);
+    }
+
+    @Override
+    @Transactional
+    @Timed("timeUpgradeCar")
+    @CachePut(value = "upgrade")
+    public CarDTO upgrade(CarDTO carDTO) {
+        Optional<Car> oldCar = repository.findById(carDTO.getId());
+        if (oldCar.isEmpty())
+            throw new ResourceNotFoundException("Car not exist with id : " + carDTO.getId());
+
+        Car updatedCar = repository.save(convertDTO.convertToCar(carDTO));
+        updateStatsUpgradeCar(oldCar.get().getMileage(), updatedCar.getMileage());
+        return convertDTO.convertToCarDTO(updatedCar);
     }
 
     @Override
     @Transactional
     @Timed("timeDeleteCar")
-    public void deleteById(Integer id) {
+    public Boolean deleteById(Integer id) {
         Optional<Car> optionalCar = repository.findById(id);
-        if (!optionalCar.isEmpty()) {
-            Car car = optionalCar.get();
-            StatsDTO statsDTO = statsService.findById(1);
-            statsDTO.setCountAllCars(statsDTO.getCountAllCars() - 1);
-            if (car.getMileage() == 0) statsDTO.setCountNewCars(statsDTO.getCountNewCars() - 1);
-            statsService.save(statsDTO);
-            repository.deleteById(id);
-        } else {
-            repository.deleteById(id);
-        }
+        if (optionalCar.isEmpty())
+            throw new ResourceNotFoundException("Car not exist with id : " + id);
+
+        Car car = optionalCar.get();
+        repository.deleteById(id);
+        updateStatsDeleteCar(car);
+        return true;
     }
 
     @Override
     @Timed("timeFindAllCarByOrderByPriceDesc")
     public List<CarDTO> findAllByOrderByPriceDesc() {
         List<Car> carList = repository.findAllByOrderByPriceDesc();
-        List<CarDTO> carDTOList = new ArrayList<>(carList.size());
-        for (Car car : carList) {
-            CarDTO carDTO = convertDTO.convertToCarDTO(car);
-            carDTOList.add(carDTO);
-        }
-        return carDTOList;
+        return convertDTO.convertListToCarDTO(carList);
     }
 
     @Override
     @Timed("timeFindAllCarByOrderByPriceAsc")
     public List<CarDTO> findAllByOrderByPriceAsc() {
         List<Car> carList = repository.findAllByOrderByPriceAsc();
-        List<CarDTO> carDTOList = new ArrayList<>(carList.size());
-        for (Car car : carList) {
-            CarDTO carDTO = convertDTO.convertToCarDTO(car);
-            carDTOList.add(carDTO);
-        }
-        return carDTOList;
+        return convertDTO.convertListToCarDTO(carList);
     }
 
     @Override
     @Timed("timeFindAllCarByOrderByMileageDesc")
     public List<CarDTO> findAllByOrderByMileageDesc() {
         List<Car> carList = repository.findAllByOrderByMileageDesc();
-        List<CarDTO> carDTOList = new ArrayList<>(carList.size());
-        for (Car car : carList) {
-            CarDTO carDTO = convertDTO.convertToCarDTO(car);
-            carDTOList.add(carDTO);
-        }
-        return carDTOList;
+        return convertDTO.convertListToCarDTO(carList);
     }
 
     @Override
     @Timed("timeFindAllCarByOrderByMileageAsc")
     public List<CarDTO> findAllByOrderByMileageAsc() {
         List<Car> carList = repository.findAllByOrderByMileageAsc();
-        List<CarDTO> carDTOList = new ArrayList<>(carList.size());
-        for (Car car : carList) {
-            CarDTO carDTO = convertDTO.convertToCarDTO(car);
-            carDTOList.add(carDTO);
-        }
-        return carDTOList;
+        return convertDTO.convertListToCarDTO(carList);
     }
 
     @Override
     @Timed("timeFindAllCarByOrderByYearDesc")
     public List<CarDTO> findAllByOrderByYearDesc() {
         List<Car> carList = repository.findAllByOrderByYearDesc();
-        List<CarDTO> carDTOList = new ArrayList<>(carList.size());
-        for (Car car : carList) {
-            CarDTO carDTO = convertDTO.convertToCarDTO(car);
-            carDTOList.add(carDTO);
-        }
-        return carDTOList;
+        return convertDTO.convertListToCarDTO(carList);
     }
 
     @Override
     @Timed("timeFindAllCarByOrderByYearAsc")
     public List<CarDTO> findAllByOrderByYearAsc() {
         List<Car> carList = repository.findAllByOrderByYearAsc();
-        List<CarDTO> carDTOList = new ArrayList<>(carList.size());
-        for (Car car : carList) {
-            CarDTO carDTO = convertDTO.convertToCarDTO(car);
-            carDTOList.add(carDTO);
-        }
-        return carDTOList;
+        return convertDTO.convertListToCarDTO(carList);
     }
 
     @Override
@@ -178,11 +143,43 @@ public class CarServiceImpl implements CarService {
     @Cacheable(value = "findByNumberName")
     public CarDTO findByNumber(String number) {
         Car car = repository.findByNumber(number);
-        if (car != null) {
-            CarDTO carDTO = convertDTO.convertToCarDTO(car);
-            return carDTO;
-        } else {
-            return null;
+        return car != null ? convertDTO.convertToCarDTO(car) : null;
+    }
+
+    private void updateStatsNewCar(Car car) {
+        StatsDTO statsDTO = getStatsDTO();
+        statsDTO.setCountAllCars(statsDTO.getCountAllCars() + 1);
+        if (car.getMileage() == 0)
+            statsDTO.setCountNewCars(statsDTO.getCountNewCars() + 1);
+
+        statsService.save(statsDTO);
+    }
+
+    private void updateStatsUpgradeCar(Integer oldMileage, Integer newMileage) {
+        if (oldMileage > 0 || newMileage == 0) return;
+        StatsDTO statsDTO = getStatsDTO();
+        statsDTO.setCountNewCars(statsDTO.getCountNewCars() - 1);
+        statsService.save(statsDTO);
+    }
+
+    private void updateStatsDeleteCar(Car car) {
+        StatsDTO statsDTO = getStatsDTO();
+        statsDTO.setCountAllCars(statsDTO.getCountAllCars() - 1);
+        if (car.getMileage() == 0)
+            statsDTO.setCountNewCars(statsDTO.getCountNewCars() - 1);
+
+        statsService.save(statsDTO);
+    }
+
+    private StatsDTO getStatsDTO() {
+        StatsDTO statsDTO = statsService.findById(1);
+        if (statsDTO == null) {
+            statsDTO = new StatsDTO();
+            statsDTO.setId(1);
         }
+        return statsDTO;
     }
 }
+
+
+

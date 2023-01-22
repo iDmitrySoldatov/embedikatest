@@ -10,9 +10,11 @@ public interface CarService {
 
     CarDTO findById(Integer id);
 
-    CarDTO save(CarDTO carDTO);
+    CarDTO create(CarDTO carDTO);
 
-    void deleteById(Integer id);
+    CarDTO upgrade(CarDTO carDTO);
+
+    Boolean deleteById(Integer id);
 
     List<CarDTO> findAllByOrderByPriceDesc();
 

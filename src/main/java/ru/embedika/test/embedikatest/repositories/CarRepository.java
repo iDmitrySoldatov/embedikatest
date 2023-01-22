@@ -1,6 +1,5 @@
 package ru.embedika.test.embedikatest.repositories;
 
-import io.micrometer.core.annotation.Timed;
 import org.springframework.data.jpa.repository.JpaRepository;
 import ru.embedika.test.embedikatest.models.Car;
 
@@ -20,5 +19,4 @@ public interface CarRepository extends JpaRepository<Car, Integer> {
     List<Car> findAllByOrderByYearAsc();
 
     Car findByNumber(String number);
-
 }
